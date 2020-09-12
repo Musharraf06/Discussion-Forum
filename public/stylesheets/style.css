@@ -91,3 +91,6 @@ a {
   right: 10rem;
   bottom: 0.2rem;
 }
+.changed {
+  position: relative;
+}
