@@ -118,7 +118,7 @@ router.post("/login", (req, res) => {
         return res.redirect("/");
       } else {
         res.flash("Wrong password or may be CAPS LOCK is on", "error", option);
-        res.redirect("/login");
+        res.redirect("/login"); 
       }
     } else {
       res.flash("User does not exist", "error", option);
