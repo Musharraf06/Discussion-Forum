@@ -244,5 +244,5 @@ router.post("/new", (req, res) => {
 
 //Fix for "Already address in use"
 //sudo lsof -i :8080
-//kill -9 {pid}
+//kill -9 pid
 module.exports = router;
