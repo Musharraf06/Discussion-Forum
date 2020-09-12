@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/stylesheets/shared/question.css">
+    <script src="../public/javascript/question.js"></script>
+</head>
+
+<body>
+    <div class="q-question">
+        <div class="q-title">
+            <div class="inner-title"><%= question.title %></div>
+
+            <div class="postedOn">
+                Posted on <%= question.postedOn.toISOString().split('T')[0] %>
+            </div>
+
+            <div class="question-username" name="question_user">
+                <%= question.user_name %>
+            </div>
+
+            <div class="tags">
+                <% for(let i = 0 ; i < question.tags.length ; i++){ %>
+                <% names = "tag" + i %>
+                <span name=<%= names %> class="ind_tag"><%= question.tags[i] %></span>
+                <!-- <a href="/searchtag?index=<%= i %>" style="text-decoration: none;"><span name=<%= names %> class="ind_tag"><%= question.tags[i] %></span></a> -->
+                <%}%>
+            </div>
+        </div>
+
+        <div class="q-description">
+            <%= question.description %>
+            </div>
+
+            <div class="image"></div>
+
+            <div class="q-user_answers">
+                <h4 class="totalAnswers"><%= answers.length %> Answer(s)</h4>
+                <% answers = answers.reverse() %>
+                <% answers.forEach(answers => { %>
+                <div class="q-post_answer">
+                    <div class="logo">
+                        <img src="<%= answers.logo %>" class="logo img" alt="">
+                    </div>
+                    <div class="inner-round">
+                        <div class="userdetails">
+                            <%= answers.user_name %> <span class="time light-font">|
+                                <%= diff(answers.postedOn) %> ago</span>
+                        </div>
+                        <div class="light-font">
+                            <div name="one_answer" class="answer">
+                                <%= answers.answer %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+                <div class="d-desc">
+                    <span class="d-desc-span">Type your answer</span>
+                </div>
+                <form action="/question/answers" method="POST">
+                    <textarea name="answer" class="answer-body" required></textarea>
+                    <input type="submit" value="Post Answer" class="post-answer-submit">
+                </form>
+            </div>
+        </div>
+</body>
+
+</html>

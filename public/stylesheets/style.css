@@ -1,0 +1,93 @@
+:root {
+  --head_drop_color: #e8e6e2;
+  --bgcolor: #ffffff;
+}
+
+* {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--bgcolor);
+  margin: 0;
+  padding: 0;
+  color: #272727;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(43, 100, 230);
+}
+
+.drop {
+  float: right;
+  position: relative;
+  right: 16px;
+  bottom: 56px;
+}
+
+.context-type {
+  cursor: default;
+  padding: 11px 2px 0px 2px;
+}
+
+.sortby-p {
+  cursor: default;
+  position: relative;
+  right: 52px;
+}
+
+.question {
+  border: 2px solid #c1b5b5;
+  height: 60px;
+  width: 99.6%;
+  margin: 62px 2px -64px 0px;
+  position: relative;
+  bottom: 82px;
+  overflow: hidden;
+}
+
+.postedOn {
+  position: relative;
+  left: 21px;
+}
+
+.questionTitle {
+  font-weight: 600;
+  position: relative;
+  left: 7px;
+}
+
+.outer-container {
+  user-select: none;
+}
+
+.votes {
+  padding: 0px;
+  position: relative;
+  left: 25px;
+  top: 11px;
+}
+
+/* span elements */
+.posted-span {
+  position: relative;
+  right: 15px;
+}
+.by-span {
+  position: relative;
+  left: 7px;
+}
+.user-name {
+  display: block;
+  position: relative;
+  left: 13rem;
+  bottom: 17px;
+}
+
+.all-below {
+  position: absolute;
+  right: 10rem;
+  bottom: 0.2rem;
+}

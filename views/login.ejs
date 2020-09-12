@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../public/stylesheets/shared/login.css">
+  <script src="../public/javascript/main.js"></script>
+</head>
+
+<body>
+  <!-- <button onclick="test_input()">Test Input</button> -->
+  <div class="container1" id="container1">
+    <form action="/login" class="login_form" method="POST">
+      <h1 class="form-header">Login</h1>
+      <div class="some1">
+        <input type="text" name="name" id="name" placeholder="Username" class="input" required>
+        <input type="password" name="password" id="pass" placeholder="Password" class="input pass" required>
+        <img src="../public/images/show-icon-png-23.jpg" class="showbtn showimage" alt="show"
+          onclick="showhide('pass')">
+        <input type="submit" value="Login" class="submit">
+        <span class="forgotpass" name="forgot_btn" onclick="show('container2', 'container1')">Forgot Password?</span>
+      </div>
+      <a href="\signup" class="login-button2" name="signup_btn">Signup or Register</a>
+    </form>
+  </div>
+
+  <div class="container2" id="container2" style="display: none;">
+    <form action="/forgotform" method="POST" class="forgotform" id="forgotform">
+      <h2 class="form-header">Reset password</h2>
+      <p class="back" onclick="show('container1', 'container2')">
+        <- </p>
+          <div class="some">
+            <input type="text" name="username" class="input2" placeholder="Username" required>
+            <select name="user_question" class="select-question" required>
+              <option value="Select a question">Select a question</option>
+              <option value="Your favorite football team">Your favorite football team</option>
+              <option value="Your nick name">Your nick name</option>
+              <option value="Your favorite book">Your favorite book</option>
+            </select>
+            <input type="text" name="answer" class="input2" placeholder="Answer" required>
+            <input type="password" class="input2" id="newpass" name="newpassword" placeholder="New password">
+            <img src="../public/images/show-icon-png-23.jpg" class="showbtn newpasswordshow" alt="show"
+              onclick="showhide('newpass')">
+            <input type="password" class="input2 con" id="confirmnewpass" name="confirmnewpass"
+              placeholder="Confirm new password" style="top: 10px;">
+            <img src="../public/images/show-icon-png-23.jpg" class="showbtn newconfirmpassshow" alt="show"
+              onclick="showhide('confirmnewpass')">
+          </div>
+          <input type="submit" class="submit proceed" value="Proceed" onclick="resetpass()">
+    </form>
+  </div>
+
+  <script type="text/javascript" src="flash/flash-client.js"></script>
+</body>
+
+</html>

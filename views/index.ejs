@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DISCUSS IT</title>
+  <link rel="stylesheet" href="../public/stylesheets/style.css" />
+</head>
+
+<body>
+  <div class="outer-container">
+    <div class="head">
+      <h4 class="context-type" name="h4">All Questions</h4>
+    </div>
+    <div class="body">
+      <% question.forEach(question => { %>
+      <div class="question">
+
+        <div class="questionTitle">
+          <p>
+            <a href="/question/<%= question._id %>"> <%= question.title %></a>
+          </p>
+        </div>
+        <!-- 
+        <div class="votes">
+          <span class="votes-span">Votes</span><%= question.votes %>
+        </div> -->
+        <div class="all-below">
+          <div class="postedOn" id="postedOn">
+            <span class="posted-span">Posted on</span><%= question.postedOn.toISOString().split('T')[0] %><span
+              class="by-span">by</span>
+          </div>
+          <div class="userPosted">
+            <div class="user-name">
+              <% if(question.user_id === userId) { %>
+              <a href="/user/MyAccount"> <%= question.user_name %> </a>
+              <% } else { %>
+              <%= question.user_name %>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

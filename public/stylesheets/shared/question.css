@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  /* user-select: none; */
+}
+
+.post-answer-submit {
+  background-color: rgb(70, 123, 204);
+  border-radius: 2px;
+  color: white;
+  outline: none;
+  border: none;
+  width: 7rem;
+  margin: 20px;
+  font-size: medium;
+  padding: 7px;
+  /* position: relative; */
+  /* top: -5px; */
+  cursor: pointer;
+}
+
+.q-title {
+  border: 2px solid #9e9e9e;
+  padding: 0px 0px 11px 5px;
+}
+
+.inner-title {
+  color: #2058ad;
+  font-weight: bold;
+  font-size: large;
+  padding: 9px 0px 7px 0px;
+}
+
+.answer-body {
+  height: 12rem;
+  width: 98.2%;
+  padding: 10px;
+  outline: none;
+  border: 2px solid #9e9e9e;
+  font-size: large;
+}
+
+.answer-body:focus {
+  outline-color: rgb(36, 114, 230) !important;
+}
+
+.q-votes {
+  display: inline;
+  position: relative;
+  left: 15rem;
+  top: 17px;
+}
+
+.totalAnswers {
+  background-color: rgb(227, 231, 231);
+  height: 19px;
+  padding: 14px;
+  border: 2px solid #8ba5af;
+  border-radius: 4px;
+}
+
+.d-desc {
+  display: block;
+  margin: 25px 0px 2px 0px;
+  height: 2.7rem;
+  position: relative;
+  bottom: 7px;
+  background-color: #f15d5d;
+  border: 2px solid #f13e3e94;
+  border-radius: 3px;
+  font-size: larger;
+  color: #771111;
+}
+
+.d-desc-span {
+  left: 1rem;
+  top: 23%;
+  position: relative;
+}
+
+.q-description {
+  padding: 9px;
+  font-size: large;
+}
+
+.q-post_answer {
+  display: block;
+  padding: 15px 15px 0px 15px;
+  border-bottom: 2px solid #cccccc;
+  font-size: larger;
+}
+
+.question-username {
+  position: relative;
+  left: 11em;
+  bottom: 18px;
+}
+
+.comment-textarea {
+  display: block;
+  margin: auto;
+  width: 1276px;
+  height: 106px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+.img {
+  border: 2px solid #777373;
+}
+
+.inner-round {
+  position: relative;
+  left: 4rem;
+  bottom: 39px;
+}
+
+.light-font {
+  font-size: 17px;
+  color: #272727;
+}
+
+.answer {
+  margin: 4px 0px 10px 0px;
+  max-width: none;
+  padding-right: 4rem;
+}
+
+.updown {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.total-upvote {
+  position: relative;
+  bottom: 10px;
+}
+
+.down {
+  position: relative;
+  bottom: 3px;
+}
+
+.vote {
+  width: 3rem;
+}
+
+.vote-form {
+  display: inline;
+}
+
+.ind_tag {
+  border: 2px solid #a7bbd8;
+  background: #c6dbea;
+  color: #457bcc;
+  margin: 7px;
+  padding: 3px;
+  border-radius: 4px;
+}

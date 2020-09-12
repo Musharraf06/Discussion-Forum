@@ -1,0 +1,246 @@
+:root {
+  --userbgcolor: white;
+  --btn-color: black;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--userbgcolor);
+}
+
+.photo {
+  display: block;
+  position: relative;
+  left: 31rem;
+  top: 23px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(133, 126, 126);
+  border-radius: 110px;
+}
+
+.details {
+  display: block;
+  padding: 13px;
+}
+
+.user-form-input {
+  background: white;
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 9cm;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid rgb(82, 78, 78);
+}
+
+.user-form-input:focus {
+  border-color: rgb(70, 123, 204);
+}
+
+.user-form-label {
+  color: #571845;
+  display: block;
+  position: relative;
+  left: 30.5rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.user-form-submit {
+  width: 5rem;
+  height: 2.3rem;
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  left: 31rem;
+  display: block;
+  margin-top: 25px;
+  background-color: #0059ff;
+  color: white;
+  /* cursor: pointer; */
+}
+
+.user-form-submit:hover {
+  background-color: #1c68f5;
+  transition: 200ms ease-out;
+}
+
+.box {
+  border: 2px solid black;
+  border-radius: 24px;
+  display: none;
+  position: relative;
+  bottom: 32rem;
+  left: 27rem;
+  width: 32rem;
+  height: 25rem;
+  background-color: rgb(13, 53, 112);
+  z-index: 101;
+}
+
+.close-button {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  bottom: 21rem;
+  font-size: 22px;
+  font-weight: bolder;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.box2 {
+  display: grid;
+  width: 5rem;
+  height: 5rem;
+  grid-template-columns: 121px 118px 101px;
+  grid-template-rows: 115px 115px 83px;
+}
+
+.image {
+  padding: 45px;
+  margin: 0;
+  position: relative;
+  left: 43px;
+  bottom: 13px;
+  cursor: pointer;
+}
+
+.box2 img {
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  border-radius: 58px;
+}
+
+.avatar-logo:hover {
+  opacity: 0.4;
+}
+
+.user-menu {
+  background-color: #e7e7e3;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 3rem;
+}
+
+.user-menu-list {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+.user-menu-link {
+  text-decoration: none;
+  color: var(--btn-color);
+}
+
+.user-menu-list:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.name-edit-btn {
+  font-size: 18px;
+}
+
+.edit-btn {
+  position: relative;
+  left: 50rem;
+  top: 2.5em;
+  z-index: 100;
+}
+
+.disabled {
+  display: none;
+}
+
+.user-date {
+  position: relative;
+  left: 39rem;
+  bottom: 3rem;
+}
+.user-data {
+  padding: 0px;
+  /* position: absolute;
+  left: 0px; */
+}
+
+.user-name {
+  position: relative;
+  left: 49rem;
+  bottom: 5rem;
+  font-size: 28px;
+}
+
+.drop-btn {
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--btn-color);
+  cursor: pointer;
+  margin: 7px;
+  padding: 4px;
+  font-size: 17px;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #f1f1f1;
+  max-width: 160px;
+  position: absolute;
+  right: 21rem;
+  top: 7rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--btn-color);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.delete-btn {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  background: none;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+.dropdown {
+  display: inline;
+}
+
+.user-btn {
+  position: relative;
+  left: 30.5rem;
+  bottom: 1rem;
+  outline: none;
+  border: 1px solid rgb(70, 123, 204);
+  border-radius: 3px;
+  color: white;
+  font-size: small;
+  background: rgb(70, 123, 204);
+  cursor: pointer;
+  padding: 4px;
+}

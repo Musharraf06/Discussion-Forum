@@ -1,0 +1,114 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/stylesheets/shared/userAccount.css">
+    <script src="../public/javascript/userAccount.js"></script>
+</head>
+
+<body>
+    <div class="container-user">
+        <div class="photo">
+            <img src="<%= user.logo %>" alt="Profile Logo" id="main_photo" width=100px height=100px
+                style="border-radius: 110px; cursor: pointer;">
+        </div>
+
+        <div class="user-data">
+            <span class="user-name"><%= user.name %></span>
+            <span class="user-date">Joined on <%= user.createdOn.toISOString().split('T')[0] %></span>
+            <a href="/MyAccount/myquestions"><button class="user-btn">My Questions</button></a>
+            <div class="dropdown">
+                <button class="drop-btn user-btn">More</button>
+                <div class="dropdown-content">
+                    <a href="">About Us</a>
+                    <a href="">Privacy Policy</a>
+                    <form action="/user/delete/<%= user._id %>?_method=DELETE" method="post">
+                        <!-- from the action url of this form you can access only the elements of this form and not the elements of other forms or any other elements on the page. This is the reason why the req.body.wish was not working earlier when it was outside this form -->
+                        <input type="text" name="wish" id="wish" value="" style="display: none;">
+                        <a><button class="delete-btn" onclick="confirmdel()">
+                                Delete Account</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-btn">
+            <input type="button" class="name-edit-btn" onclick="edit()" value="edit">
+        </div>
+        <div class="details">
+            <form action="/user/update/<%= user._id %>?_method=PUT" method="POST">
+                <label for="name" class="user-form-label">Name</label>
+                <input type="text" name="name" id="name" class="user-form-input" disabled value="<%= user.name %>">
+
+                <label for="email" class="user-form-label">Email</label>
+                <input type="email" name="email" id="email" class="user-form-input" disabled value="<%= user.email %>">
+
+                <label for="city" class="user-form-label">City</label>
+                <input type="text" name="city" id="city" class="user-form-input" disabled value="<%= user.city %>">
+
+                <label for="question" class="user-form-label">Question</label>
+                <select name="question" id="question" class="user-form-input" style="width: 23rem;" disabled>
+                    <option value="<%= user.userQuestion %>"><%= user.userQuestion %></option>
+                    <option value="Your favorite football team">Your favorite football team</option>
+                    <option value="Your nick name">Your nick name</option>
+                    <option value="Your favorite book">Your favorite book</option>
+                </select>
+
+                <label for="answer" class="user-form-label">Answer</label>
+                <input type="text" name="answer" id="answer" class="user-form-input" disabled
+                    value="<%= user.answer %>">
+
+                <button class="user-form-submit" id="submit" disabled>Update</button>
+                <input type="text" name="src" id="logosrc" value="<%= user.logo %>" style="display: none;">
+            </form>
+        </div>
+
+        <div class="box" id="box">
+            <p class="close-button" id="close-button">&times;</p>
+            <div class="box2" id="box2">
+                <div class="box2" id="box2">
+                    <div class="image" id="item1">
+                        <img src="../public/images/avatars/3530378_1.jpg" alt="" id="3530378_1" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item2">
+                        <img src="../public/images/avatars/3530378_2.jpg" alt="" id="3530378_2" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item3">
+                        <img src="../public/images/avatars/3530378_3.jpg" alt="" id="3530378_3" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item4">
+                        <img src="../public/images/avatars/3530378_6.jpg" alt="" id="3530378_6" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item5">
+                        <img src="../public/images/avatars/3530378_4.jpg" alt="" id="3530378_4" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item6">
+                        <img src="../public/images/avatars/3530378_5.jpg" alt="" id="3530378_5" class="avatar-logo"
+                            onclick="change_avatar(this.id)"
+                            style="border: 2px solid rgb(165, 157, 157); border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item7">
+                        <img src="../public/images/avatars/3530378_7.jpg" alt="" id="3530378_7" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item8">
+                        <img src="../public/images/avatars/3530378_8.jpg" alt="" id="3530378_8" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                    <div class="image" id="item9">
+                        <img src="../public/images/avatars/3530378_9.jpg" alt="" id="3530378_9" class="avatar-logo"
+                            onclick="change_avatar(this.id)" style="border: 2px solid white; border-radius: 60px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

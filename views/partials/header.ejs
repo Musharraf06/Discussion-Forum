@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> </title>
+  <link rel="stylesheet" href="../../public/stylesheets/shared/head.css">
+  <script>
+
+    window.onclick = function (event) {
+      let menu = getId('menu_content_id')
+      let menu_btn = getId('menu_btn_id')
+      let menu_btn_center = getId('menu_btn__burger_id')
+      let menu_btn_top = getId('menu_btn-top__burger_id')
+      let menu_btn_bottom = getId('menu_btn-bottom__burger_id')
+      let li1 = getId('li_1')
+      let li2 = getId('li_2')
+      let li3 = getId('li_3')
+      let li4 = getId('li_4')
+      let li5 = getId('li_5')
+      if (event.target != menu && event.target != menu_btn && event.target != menu_btn_center && event.target != menu_btn_top && event.target != menu_btn_bottom && event.target != li1 && event.target != li2 && event.target != li3 && event.target != li4 && event.target != li5) {
+        menu.style.display = 'none'
+      } else {
+        menu.style.display = 'inline'
+      }
+    }
+
+    function getId(element) {
+      var ID = document.getElementById(element)
+      return ID
+    }
+
+  </script>
+</head>
+
+<body>
+  <header>
+
+    <div class="container-head">
+      <div class="menu_btn" id="menu_btn_id">
+        <div class="menu_btn__burger" id="menu_btn__burger_id"></div>
+        <div class="menu_btn-top__burger" id="menu_btn-top__burger_id"></div>
+        <div class="menu_btn-bottom__burger" id="menu_btn-bottom__burger_id"></div>
+      </div>
+
+      <div class="menu_content" id="menu_content_id" style="display:none;">
+        <ul>
+          <li id="li_1"><a href="/">HOME</a></li>
+          <li id="li_2"><a href="/question/newquestion">Ask a Question</a></li>
+          <li id="li_3"><a href="/user/MyAccount">My account</a></li>
+          <!-- <li id="li_4"><a href="/services">SERVICES</a></li>
+          <li id="li_5"><a href="/about">ABOUT</a></li> -->
+        </ul>
+      </div>
+
+      <div class="center">
+        <form action="/search" method="POST">
+          <input type="text" name="searchpattern" class="searchText" id="search-input-id" placeholder="Search..">
+          <!-- <a href="" onclick="this.href='/search/'+document.getElementById('search-input-id').value" id="anchor"><input
+            type="submit" class="button3" value="Search"></a> -->
+          <input type="submit" class="button3" value="Search">
+        </form>
+      </div>
+
+      <div class="right">
+        <!-- <a href="\login"><button class="button1" name="login_btn">Log in</button></a>
+        <a href="\signup"><button class="button2" name="signup_btn">Sign up</button></a> -->
+        <form action="/logout" method="post">
+          <button class="button2" name="logout_btn">Logout</button>
+        </form>
+      </div>
+
+    </div>
+  </header>
+</body>
+
+</html>

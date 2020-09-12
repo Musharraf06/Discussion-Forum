@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post your question</title>
+    <link rel="stylesheet" href="../public/stylesheets/shared/postQuestion.css">
+    <script src="../public/javascript/postQuestion.js" type="text/javascript"> </script>
+</head>
+
+<body>
+    <div class="add-main-question">
+        <p class="ask-question-headers ask">Ask a public question</p>
+        <form action='/question/newquestion' id="form" name="form" method="POST">
+
+            <div class="add-sub-question">
+                <div class="main-question">
+                    <p class="ask-question-headers">Title</p>
+                    <input type="text" name="title" class="header" id="header" placeholder="Question" required>
+                </div>
+
+                <div class="description">
+                    <p class="ask-question-headers">Body</p>
+                    <textarea name="description" id="description" class="textarea" cols="30" rows="10"
+                        placeholder="Description" required></textarea>
+                </div>
+
+                <!-- <div class="picture">
+                    <p class="ask-question-headers">Add picture</p>
+                    <label for="photo" class="lab" onclick="showphoto()">Upload image<span>(Max. size
+                            2mb)</span></label>
+                    <input type="file" name="input" id="photo" accept="" image/*>
+                </div> -->
+
+                <div class="tags" id="tags">
+                    <p class="ask-question-headers">Add tags</p>
+                    <input type="text" name="tagInput" class="tagInput" id="tagInput" onblur="tag()"
+                        placeholder="Add tag and clear focus to add another">
+                </div>
+
+                <div class="submit">
+                    <input type="submit" class="post-submit-btn" value="Post Question">
+                </div>
+            </div>
+            <input type="text" name="count" id="count" class="tag_class" value="1">
+        </form>
+    </div>
+</body>
+
+</html>
